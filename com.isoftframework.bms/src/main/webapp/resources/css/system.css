@@ -1,0 +1,80 @@
+/**
+*
+*/
+#header { background: #7F99BE url(/images/layout-browser-hd-bg.gif) repeat-x center;}
+#header h1 {font-size: 16px;color: #fff;padding: 3px 10px; font-family:"微软雅黑","黑体"}
+
+.tabs{background-image: url(../images/menuPanel/bulletin_manager.gif) !important;}
+.manage{background-image: url(../images/menuPanel/admin.gif) !important;}
+.home{background-image: url(../images/home.gif) !important; line-height:30px;}
+.icon-navmenu{background-image: url(../images/menu/navigation.gif) !important;}
+.upload-icon {background: url('../images/btn/image_add.png') no-repeat 0 0 !important;}
+.clock{background:url(../images/clock.gif) no-repeat;width:300px;height:40px;margin:'30 0 0 200';padding-left:20px;color:#004C7E;font:14px "宋体";}
+
+
+
+/*
+ * Action Icons
+ */
+.slide-right-icon{background: url('../images/btn/mini-right.gif') no-repeat 0 0 !important;}
+.x-action-col-icon {
+    cursor: pointer;
+}
+.add-icon {background: url('../images/btn/fam/add.gif') no-repeat 0 0 !important;}
+.delete-icon {background: url('../images/btn/fam/delete.gif') no-repeat 0 0 !important;}
+.add {
+    background: url('../images/btn/fam/add.png') no-repeat;
+}
+.delete {
+    background-image: url('../images/btn/fam/delete.gif');
+}
+
+.save {
+    background: url('../images/btn/save_16x16.gif') no-repeat;
+}
+.query {
+    background-image: url('../images/btn/list.gif');
+}
+.reset {
+    background-image: url('../images/btn/redo1_16x16.gif');
+}
+/*
+ *orgManage  
+ *Icon styles
+ */
+.org-new {
+    background: url('../images/btn/fam/user_add.png') no-repeat;
+}
+ 
+.org-delete {
+    background-image: url('../images/btn/fam/user_delete.png');
+}
+/**
+userManage
+*/
+.user-add {
+    background: url('../images/btn/fam/add.png') no-repeat;
+}
+ 
+.user-delete {
+    background-image: url('../images/btn/fam/delete.gif');
+}
+.user-query {
+    background-image: url('../images/btn/list.gif');
+}
+/*
+ * menuManage
+ * Icon styles
+ */
+.new-menu {
+    background: url('../images/btn/folder_(add)_16x16.gif') no-repeat;
+}
+.new-func {
+    background-image: url('../images/btn/new_folder.png');
+}
+.new-res {
+    background-image: url('../images/btn/new_file.png');
+}
+.delete-menu {
+    background-image: url('../images/btn/delete_file.png');
+}

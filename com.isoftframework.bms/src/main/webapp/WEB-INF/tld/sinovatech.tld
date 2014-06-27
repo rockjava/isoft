@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+    "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.2</jspversion>
+	<shortname>sinovatech</shortname>
+	<info>
+		This tag library contains tag extensions for the Remend Web
+		Application
+	</info>
+	<tag>
+		<name>verifyimage</name>
+		<tagclass>com.sinovatech.common.web.taglib.ImageTag</tagclass>
+		<bodycontent>JSP</bodycontent>
+
+		<attribute>
+			<!-- key for the Random Validation code in the session, default is valid -->
+			<name>sname</name>
+			<required>false</required><!--value={left,right,center,absbottom} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>align</name>
+			<required>true</required><!--value={left,right,center,absbottom} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>border</name>
+			<required>true</required><!--value={0,1,2} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>path</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>title</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>rgb</name>
+			<required>true</required><!--value={0|0|0,255|255|255} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>x</name>
+			<required>true</required><!--value={5,6,7} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>y</name>
+			<required>true</required><!--value={12,13,14} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>size</name>
+			<required>true</required><!--value={12,13,14} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

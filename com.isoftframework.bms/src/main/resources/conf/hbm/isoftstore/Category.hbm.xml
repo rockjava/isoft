@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class  name="com.isoftstore.model.Category"  table="I_CATEGORY" >
+		<comment>软件类别</comment>
+		<id name="id"  type="java.lang.String" >
+			<column  name="ID"   />
+			<!-- assigned ，uuid.hex -->
+			<generator class="assigned" />
+		</id>
+		<property  name="text"  type="java.lang.String" >
+			<column  name="text" >
+				<comment>名称</comment>
+			</column>
+		</property>
+		<property  name="parentId"  type="java.lang.String" >
+			<column  name="parent_id"   >
+				<comment>父节点</comment>
+			</column>
+		</property>
+		
+		<property  name="sort"  type="java.lang.Integer" >
+			<column  name="sort"   >
+				<comment></comment>
+			</column>
+		</property>
+		<property  name="img"  type="java.lang.String" >
+			<column  name="IMG">
+				<comment>图片</comment>
+			</column>
+		</property>
+	  
+		
+	</class>
+</hibernate-mapping>

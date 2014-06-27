@@ -1,0 +1,91 @@
+﻿<html>
+<head>
+<script language="JavaScript" type="text/javascript" src="../WdatePicker.js"></script>
+</head>
+<body>
+ 自定义弹出位置：  <input class="Wdate" type="text" id="d16" onfocus="WdatePicker({position:{left:100,top:50}})"/>
+ <br/>
+周显示：
+<input id="d121" type="text" onFocus="WdatePicker({isShowWeek:true})"/>
+
+<div>
+          <h4>示例1-2-2 利用onpicked事件把周赋值给另外的文本框</h4>
+          <p>
+            <input type="text" class="Wdate" id="d122" onFocus="WdatePicker({isShowWeek:true,onpicked:function(){$dp.$('d122_1').value=$dp.cal.getP('W','W');$dp.$('d122_2').value=$dp.cal.getP('W','WW');}})"/>
+            &nbsp;&nbsp;
+            您选择了第
+            <input type="text" id="d122_1" size="3"/>
+            (W格式)周, 另外您可以使用WW格式:
+            <input  type="text" id="d122_2" size="3"/>
+            周 
+          </p>
+        </div>
+		
+		
+<div>
+          <h4>示例5-2-3 将选择的值拆分到文本框 </h4>
+          <p>
+            <input type="text" id="d523_y" size="5"/>
+            年
+            <input type="text" id="d523_M" size="3"/>
+            月
+            <input type="text" id="d523_d" size="3"/>
+            日
+            <input type="text" id="d523_HH" size="3"/>
+            时
+            <input type="text" id="d523_mm" size="3"/>
+            分
+            <input type="text" id="d523_ss" size="3"/>
+            秒
+            <input type="text" id="d523"/>
+            <img onClick="WdatePicker({el:'d523',dateFmt:'yyyy-MM-dd HH:mm:ss',onpicked:pickedFunc})" src="../../My97DatePicker/skin/datePicker.gif" width="16" height="22" align="absmiddle" style="cursor:pointer"/>
+            <script>
+			function pickedFunc(){
+				$dp.$('d523_y').value=$dp.cal.getP('y');
+				$dp.$('d523_M').value=$dp.cal.getP('M');
+				$dp.$('d523_d').value=$dp.cal.getP('d');
+				$dp.$('d523_HH').value=$dp.cal.getP('H');
+				$dp.$('d523_mm').value=$dp.cal.getP('m');
+				$dp.$('d523_ss').value=$dp.cal.getP('s');
+			}
+			</script>
+            <br />
+            &lt;input type=&quot;text&quot; id=&quot;d523_y&quot; size=&quot;5&quot;/&gt;
+            年<br />
+            &lt;input type=&quot;text&quot; id=&quot;d523_M&quot; size=&quot;3&quot;/&gt;
+            月<br />
+            &lt;input type=&quot;text&quot; id=&quot;d523_d&quot; size=&quot;3&quot;/&gt;
+            日<br />
+            &lt;input type=&quot;text&quot; id=&quot;d523_HH&quot; size=&quot;3&quot;/&gt;
+            时<br />
+            &lt;input type=&quot;text&quot; id=&quot;d523_mm&quot; size=&quot;3&quot;/&gt;
+            分<br />
+            &lt;input type=&quot;text&quot; id=&quot;d523_ss&quot; size=&quot;3&quot;/&gt;
+            秒 <br />
+            &lt;img onclick=&quot;WdatePicker({<span class="STYLE2">el:</span><span class="STYLE1">'d523'</span>,dateFmt:'yyyy-MM-dd HH:mm:ss',<span class="STYLE2">onpicked:</span><span class="STYLE1">pickedFunc</span>})&quot; src=&quot;../../My97DatePicker/skin/datePicker.gif&quot; width=&quot;16&quot; height=&quot;22&quot; align=&quot;absmiddle&quot; style=&quot;cursor:pointer&quot;/&gt;<br />
+            <span class="STYLE1">&lt;script&gt;</span><br />
+            <span class="STYLE2">function</span> pickedFunc(){<br />
+            $dp.$('d523_y').value=$dp.cal.getP('y');<br />
+            $dp.$('d523_M').value=$dp.cal.getP('M');<br />
+            $dp.$('d523_d').value=$dp.cal.getP('d');<br />
+            $dp.$('d523_HH').value=$dp.cal.getP('H');<br />
+            $dp.$('d523_mm').value=$dp.cal.getP('m');<br />
+            $dp.$('d523_ss').value=$dp.cal.getP('s');<br />
+            }<br />
+            <span class="STYLE1">&lt;/script&gt;</span><br />
+            <br />
+            <span class="STYLE1">注意:</span>el:'d523'中,如果你不需要d523这个框,你可以把他改成hidden,但是el属性必须指定<br />
+            $dp.$和$dp.cal.getP都是<a href="999.asp?#m5">内置函数</a> </p>
+        </div>
+</script>
+<br/>
+禁用周一到周六,且周显示
+<input id="d442" type="text" class="Wdate" onFocus="WdatePicker({disabledDays:[1,2,3,4,5,6],isShowWeek:true,onpicked:pickedWeekFunc})"/>
+<script>
+function pickedWeekFunc(){
+ $dp.$('d442').value=$dp.cal.getP('y')+"年"+$dp.cal.getP('W','WW')+"周";
+}
+</script>
+
+</body>
+</html>

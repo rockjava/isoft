@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class  name="com.isoftframework.bms.model.MenuBrowserDTO"  table="BMS_MENU_BROWSER" >
+		<comment></comment>
+		
+		<id name="menuId"  type="java.lang.String" >
+			<column  name="MENU_ID"   />
+			<generator class="foreign">
+				<param name="property">menu</param>
+			</generator>
+		</id>  
+		<one-to-one name="menu"	class="com.isoftframework.bms.model.TBmsRscMenuDTO" constrained="true"/>
+		<property  name="sort"  type="java.lang.Integer" >
+			<column  name="SORT" >
+				<comment></comment>
+			</column>
+		</property>
+		
+	</class>
+</hibernate-mapping>

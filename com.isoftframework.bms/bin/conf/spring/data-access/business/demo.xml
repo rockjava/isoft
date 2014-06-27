@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-lazy-init="false" default-autowire="no" default-dependency-check="none" default-merge="false">
+  
+  <bean id="myClubChannelDAO" class="com.isoftframework.demo.dao.page.impl.ClubChannelDAO" />
+  
+  <bean id="myClubChannelService" class="com.isoftframework.demo.service.page.impl.ClubChannelService" />
+ 
+  <bean id="myClubMemberDAO" class="com.isoftframework.demo.dao.page.impl.ClubMemberDAO" />
+  
+  <bean id="myClubMemberService" class="com.isoftframework.demo.service.page.impl.ClubMemberService" />
+   
+  
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE validation-config SYSTEM "validation-config.dtd">
+<validation-config lang="auto">
+	<form id="saveForm" show-error="alert" show-type="first">
+		<field name="scode" display-name="工号" onfail="">
+			<depend name="required" />
+			<depend name="maxLength" param0="20"/>
+			<depend name="mask" param0="^[0-9A-Za-z]*$" />
+		</field>
+		<field name="spass" display-name="密码">
+			<depend name="required" />
+			<depend name="maxLength" param0="10"/>
+			<depend name="commonChar" />
+		</field>
+		<field name="confirm" display-name="确认密码">
+			<depend name="equalsField" param0="spass"/>
+		</field>
+		<field name="sname" display-name="姓名" onfail="">
+			<depend name="required" />
+		</field>
+		<field name="clubChannelDTOId" display-name="所属绿色通道">
+			<depend name="required" />
+		</field>
+	</form>
+</validation-config>

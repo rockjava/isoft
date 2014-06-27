@@ -1,0 +1,2 @@
+
+include "com.isoftframework.core", "com.isoftframework.web","com.isoftframework.bms","com.isoftframework.conf"

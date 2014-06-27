@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class
+		name="com.isoftframework.demo.model.page.TClubChannelDTO" table="demo_club_channel">
+		<comment>demo_club_channel</comment>
+		<id name="id" type="java.lang.String">
+			<column name="id" length="50" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="scode" type="java.lang.String">
+			<column name="scode" >
+				<comment>scode</comment>
+			</column>
+		</property>
+		
+
+		<property name="sname" type="java.lang.String">
+			<column name="sname" length="100">
+				<comment>sname</comment>
+			</column>
+		</property>
+
+		 
+	</class>
+</hibernate-mapping>

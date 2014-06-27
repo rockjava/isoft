@@ -1,0 +1,33 @@
+#macro(replaceParam $url $key $value)
+	$httpUtil.replaceParam($url,$key,$value) 
+#end
+
+#macro(replaceParam2 $url $key $value)
+	#set($_key=$key +'=')
+	#set($keyIdx = $url.indexOf($_key) ) 
+	#if ($keyIdx != -1) 
+		#set($paramEndIdx = $url.indexOf("&", $keyIdx))
+		#if ($paramEndIdx == -1) 
+				#set($paramEndIdx = $url.length())
+		#end
+		#if ($value != '') 
+			#set($keyValue=$key + "=" + $value)
+			#set($url=$url.replace($url.substring($keyIdx, $paramEndIdx), $keyValue))
+		#else 
+			#set($_keyIdx=$keyIdx - 1 )
+			#set($url=$url.replace($url.substring($_keyIdx, $paramEndIdx),''))
+		#end
+	#else 
+		#if($value != '')
+			#if($url.indexOf("?") > -1)
+				#set($url=$url+'&')
+			#else
+				#set($url=$url+'?')
+			#end
+			#set($url=$url + $key + '=' + $value)
+		#end
+		 
+	#end
+	$url
+#end
+

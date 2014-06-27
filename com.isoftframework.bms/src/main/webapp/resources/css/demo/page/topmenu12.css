@@ -1,0 +1,31 @@
+/* 
+	LEVEL ONE
+*/
+ul.dropdown { 
+	position: relative !important;
+	position: absolute; 
+	list-style: none; font-size: 14px; 
+}
+
+ul.dropdown li                      { font-weight: bold; float: left;  text-align: left; word-wrap:no-wrap}
+ul.dropdown a:hover		            { color: #303648;}
+ul.dropdown li a                    { display: block; padding: 4px 8px; color: #333; text-decoration:none;}
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { background: url('../cms_images/menu_on.gif') repeat-x; color: black; position: relative; z-index:10000;}
+ul.dropdown li.hover a              { color: black; }
+
+/* 
+	LEVEL TWO
+*/
+ul.dropdown ul 						{visibility: hidden; position: absolute; top: 100%; left: 0; list-style: none; width:120px; overflow: visible; border:1px solid #7991a6; background-color: #f3f4f4}
+ul.dropdown ul li 					{ font-weight: normal; background: #f3f4f4; color: #000; float: left; width:100%; border-bottom: 1px solid #7991a6;
+									  *display: inline; *width: 100%;}/*ie fix*/
+                                    /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; } 
+
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; float: left;}

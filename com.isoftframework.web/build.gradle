@@ -1,0 +1,6 @@
+dependencies {
+	compile project(':com.isoftframework.core')
+}
+tasks.withType(Compile) {
+	    options.encoding = "UTF-8"
+	}

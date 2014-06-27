@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class  name="com.isoftframework.bms.model.TBmsOrgDTO"  table="BMS_ORG" >
+		<comment>组织机构</comment>
+		<id name="id"  type="java.lang.String" >
+			<column  name="ID"   />
+			<!-- assigned ，uuid.hex -->
+			<generator class="assigned" />
+		</id>
+		<property  name="text"  type="java.lang.String" >
+			<column  name="NAME"  length="60" >
+				<comment>名称</comment>
+			</column>
+		</property>
+		<property  name="parentId"  type="java.lang.String" >
+			<column  name="PARENTID"   >
+				<comment>父节点名称</comment>
+			</column>
+		</property>
+		
+		<property  name="remark"  type="java.lang.String" >
+			<column  name="REMARK"  length="1000" >
+				<comment>描述</comment>
+			</column>
+		</property>
+
+		<property  name="icon"  type="java.lang.String" >
+			<column  name="ICON"  length="100" >
+				<comment>显示图标</comment>
+			</column>
+		</property>
+		 
+	</class>
+</hibernate-mapping>

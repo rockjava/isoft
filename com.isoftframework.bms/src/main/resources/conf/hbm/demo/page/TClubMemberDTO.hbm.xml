@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class  name="com.isoftframework.demo.model.page.TClubMemberDTO"  table="demo_club_member" >
+		<comment>demo_club_member</comment>
+		
+		<id name="id"  type="java.lang.String" >
+			<column  name="id"  length="50"  />
+			<generator class="uuid.hex" />
+		</id>
+		
+		<property  name="scode"  type="java.lang.String" >
+			<column  name="scode"  length="20" >
+				<comment>scode</comment>
+			</column>
+		</property>
+
+		<property  name="spass"  type="java.lang.String" >
+			<column  name="spass"  length="10" >
+				<comment>spass</comment>
+			</column>
+		</property>
+
+		<property  name="sname"  type="java.lang.String" >
+			<column  name="sname"  length="20" >
+				<comment>sname</comment>
+			</column>
+		</property>
+		
+		<property  name="createTime"  type="java.util.Date" >
+			<column  name="create_time"    >
+				<comment>创建时间</comment>
+			</column>
+		</property>
+		
+		<property  name="isLocked"  type="java.lang.Integer" >
+			<column  name="is_locked"    >
+				<comment>是否加锁?1，加锁；0，不加锁</comment>
+			</column>
+		</property>
+		<property  name="clubChannelDTOId"  type="java.lang.String"  insert="false" update="false" >
+			<column  name="club_channel_id"    >
+				<comment>所属绿色通道Id</comment>
+			</column>
+		</property>
+		<many-to-one name="clubChannelDTO" class="com.isoftframework.demo.model.page.TClubChannelDTO" fetch="select" lazy="false">
+			<column name="club_channel_id">
+				<comment>所属绿色通道</comment>
+			</column>
+		</many-to-one>
+		
+	</class>
+</hibernate-mapping>

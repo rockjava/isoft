@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class  name="com.isoftframework.bms.model.TBmsUserDTO"  table="BMS_USER" >
+		<comment>用户</comment>
+		<id name="id"  type="java.lang.String" >
+			<column  name="ID"   />
+			<!-- assigned ，uuid.hex -->
+			<generator class="uuid.hex" />
+		</id>
+		<property  name="username"  type="java.lang.String" >
+			<column  name="USERNAME" >
+				<comment>用户名</comment>
+			</column>
+		</property>
+		<property  name="password"  type="java.lang.String" >
+			<column  name="PASSWORD"   >
+				<comment>密码</comment>
+			</column>
+		</property>
+		
+		<property  name="salt"  type="java.lang.String" >
+			<column  name="SALT"   >
+				<comment></comment>
+			</column>
+		</property>
+
+		<property  name="realName"  type="java.lang.String" >
+			<column  name="REAL_NAME"  >
+				<comment>真实姓名</comment>
+			</column>
+		</property>
+		<property  name="enabled"  type="char" >
+			<column  name="ENABLED">
+				<comment>状态：1正常，0停用</comment>
+			</column>
+		</property>
+		<property  name="sex"  type="char" >
+			<column  name="SEX">
+				<comment>性别 :1男，0女</comment>
+			</column>
+		</property> 
+		
+		
+		<property  name="mobile"  type="java.lang.String" >
+			<column  name="MOBILE"  >
+				<comment></comment>
+			</column>
+		</property>
+		<property  name="email"  type="java.lang.String" >
+			<column  name="EMAIL"  >
+				<comment></comment>
+			</column>
+		</property>
+
+		<property  name="fax"  type="java.lang.String" >
+			<column  name="FAX"  length="100" >
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property  name="phone" type="java.lang.String" >
+			<column  name="PHONE"  >
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property  name="address" type="java.lang.String" >
+			<column  name="ADDRESS"  >
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property  name="remark"  type="java.lang.String" >
+			<column  name="REMARK" >
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property  name="orgid"  type="java.lang.String" insert="true" update="true">
+			<column  name="ORGID" >
+				<comment>组织机构编号</comment>
+			</column>
+		</property>
+		<!-- <many-to-one  name="org"  class="com.isoftframework.model.TBmsOrgDTO" lazy="proxy" >
+			<column  name="ORGID"  >
+				<comment>组织机构编号</comment>
+			</column>
+		</many-to-one>
+		 -->
+		
+	</class>
+</hibernate-mapping>

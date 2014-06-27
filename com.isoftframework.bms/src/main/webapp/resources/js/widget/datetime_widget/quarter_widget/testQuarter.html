@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+
+<script language="javascript" type="text/javascript" src="CalendarQuarter.js"></script>
+
+
+
+</head>
+<body>
+<form>
+<div>
+
+
+  <input name="control_date" type="text" id="control_date" />
+  <input name="popup_date" type="text" id="popup_date"  readonly="readonly"/>
+  <br/>
+  <input name="popup_date2" type="text" id="popup_date2" onclick="new CalendarQuarter().show('control_date','popup_date2')" readonly="readonly"/>
+
+</div>
+</form>
+
+<script language="javascript">
+document.getElementById('popup_date').onclick=function(){
+	new CalendarQuarter(
+	{
+		patternDelimiter:'Q',
+		onpicked:function(){
+			alert('picked');
+		}
+	}).show('control_date','popup_date');
+}
+</script>
+</body>
+</html>

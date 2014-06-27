@@ -1,0 +1,160 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.1.xsd
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd
+        http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd" >
+       
+    
+    
+    <!-- 会自动注册了validator  ConversionService  -->
+    <mvc:annotation-driven>  
+        <mvc:message-converters>  
+        
+           <bean class="org.springframework.http.converter.FormHttpMessageConverter" >  
+	            <property name = "supportedMediaTypes">
+					<list>
+	 					 <value>text/html;charset=UTF-8</value>
+	 				</list>
+				</property>
+            </bean> 
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter" >  
+	            <property name = "supportedMediaTypes">
+					<list>
+	 					 <value>text/plain;charset=UTF-8</value>
+	 				</list>
+				</property>
+            </bean>  
+            <bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">  
+			   <property name="objectMapper">
+					<bean class="com.frm.common.HibernateObjectMapper">
+						<property name="dateFormat">
+							<bean class="java.text.SimpleDateFormat">
+								<constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss" />
+							</bean>
+						</property>
+					</bean>
+				</property>
+			    <property name="supportedMediaTypes">  
+			        <list>  
+			            <value>applicaton/json;charset=UTF-8</value>  
+			        </list>  
+			    </property>  
+			</bean>  
+        </mvc:message-converters>  
+        <mvc:argument-resolvers>  
+        	<!-- 处理pageable的实例化，避免出现无法实例化接口的问题，并使得能够使用PageableDefault注解提供默认初始值 -->  
+        	<bean class="org.springframework.data.web.PageableArgumentResolver"></bean>  
+    	</mvc:argument-resolvers>  
+    </mvc:annotation-driven>  
+    
+    <!-- 开启controller注解支持 -->
+    <!-- 注：如果base-package=com.isoftstore 则注解事务不起作用 TODO 读源码 -->
+    <context:component-scan base-package="com.frm.controller">
+    	<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/> 
+    </context:component-scan>
+    
+    <context:component-scan base-package="com.demo.controller">
+    	<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/> 
+    </context:component-scan>
+	<!-- 静态资源映射 all resources inside folder src/main/webapp/resources are mapped so they can be refered to inside JSP files-->
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+  <!-- serve static resources (*.html, ...) from src/main/webapp/ -->
+    <mvc:default-servlet-handler/>
+
+    
+    <!--
+	This bean sets up the Velocity environment for us based on a root path for templates.
+	Optionally, a properties file can be specified for more control over the Velocity
+	environment, but the defaults are pretty sane for file based template loading.
+	-->
+	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+	    <property name="resourceLoaderPath" value="/"/>
+	     <property name="configLocation" value="classpath:/conf/velocity/velocity.properties"/>
+	</bean>
+	<!-- freemarker config -->
+	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+	    <property name="templateLoaderPath" value="/"/>
+	</bean>
+
+    <!-- ========================= VIEW定义 ========================= -->
+      <bean  id="viewResolver" class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="contentNegotiationManager" ref="cnManager"/>
+        
+        <property name="viewResolvers">
+        	<list>
+        		<!--
+				View resolvers can also be configured with ResourceBundles or XML files. If you need
+				different view resolving based on Locale, you have to use the resource bundle resolver.
+				-->
+				<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+				    <property name="cache" value="true"/>
+				    <property name="prefix" value="/view/"/>
+				    <property name="suffix" value=".ftl"/>
+				</bean>
+			    <!--
+				View resolvers can also be configured with ResourceBundles or XML files. If you need
+				different view resolving based on Locale, you have to use the resource bundle resolver.
+				-->
+				<bean class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+				 	<property name="contentType"><value>text/html;charset=UTF-8</value></property>
+				    <property name="cache" value="true"/>
+				    <property name="prefix" value="/view/"/>
+				    <property name="suffix" value=".vm"/>
+				</bean>
+        		 <!-- Default viewClass: JSTL view (JSP with html output) -->
+			    <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+			        <!-- Example: a logical view name of 'vets' is mapped to '/view/jsp/vets.jsp' -->
+			        <property name="prefix" value="/view/"/>
+			        <property name="suffix" value=".jsp"/>
+			    </bean>
+			     
+			   
+			    <!-- Used here for 'xml' and 'atom' views  -->
+			    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
+        	</list>
+        </property>
+    </bean>
+
+    <!-- Simple strategy: only path extension is taken into account -->
+    <bean id="cnManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <property name="favorPathExtension" value="true"/>
+        <property name="ignoreAcceptHeader" value="false"/>
+        <property name="defaultContentType" value="text/html"/>
+        <property name="mediaTypes">
+            <map>
+                <entry key="html" value="text/html" />
+                <entry key="vm" value="text/html" />
+                <entry key="ftl" value="text/html" />
+                <entry key="xml" value="application/xml" />
+                <entry key="atom" value="application/atom+xml" />
+                <entry key="json" value="application/json"/>
+            </map>
+        </property>
+    </bean>
+
+
+    <!-- 文件上传相关 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--one of the properties available;the maximum file size in bytes-->
+        <property name="maxUploadSize" value="100000"/>
+    </bean>
+ 
+	
+ 	<!--国际化的消息资源文件
+        - Message source for this context, loaded from localized "messages_xx" files.
+        - Files are stored inside src/main/resources
+    -->
+   <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
+          p:basename="messages/messages"/>
+	
+</beans>

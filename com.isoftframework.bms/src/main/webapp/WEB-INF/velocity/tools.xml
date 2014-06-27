@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbox>
+	<data>
+		<key>name</key>
+		<value>severus</value>
+	</data>
+	<tool>
+		<key>httpUtil</key>
+		<class>com.isoftframework.common.util.HttpUtil</class>
+	</tool>
+	<tool>
+		<key>date</key>
+		<scope>request</scope>
+		<class>org.apache.velocity.tools.generic.DateTool</class>
+		<parameter name="format" value="yyyy-MM-dd hh:mm:mm"/>
+	</tool>
+</toolbox>
