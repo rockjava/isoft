@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.Header', {
+Ext.define('FM.view.Header', {
     extend: 'Ext.Component',
     xtype: 'box',
     alias: 'widget.fmheader',

@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.Viewport',{
+Ext.define('FM.view.Viewport',{
 	extend: 'Ext.Viewport',
 	layout: 'fit',
 	hideBorders: true,

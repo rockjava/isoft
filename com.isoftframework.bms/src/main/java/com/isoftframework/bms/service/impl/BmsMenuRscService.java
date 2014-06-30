@@ -1,4 +1,4 @@
-﻿package com.isoftframework.bms.service.impl;
+package com.isoftframework.bms.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;

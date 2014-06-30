@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.bms.menursc.MenurscTree', {
+Ext.define('FM.view.bms.menursc.MenurscTree', {
     extend: 'FM.view.base.tree.TreeWithToolAction',
     alias: 'widget.menurscTree',
  // title: '系统菜单管理',

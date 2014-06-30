@@ -1,4 +1,4 @@
-﻿
+
 		//这个方法将使用XMLHTTPRequest对象来进行AJAX的异步数据交互
 		var xmlhttp;
 		 

@@ -1,0 +1,9 @@
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:wangzhengquan/isoft.git
+git push -u origin master
+
+
+ssh-keygen -t rsa -C "wangzhengquan85@126.com"

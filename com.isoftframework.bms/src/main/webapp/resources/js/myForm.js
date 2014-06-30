@@ -1,4 +1,4 @@
-﻿/**
+/**
  * need json2.js
  */
 //  var params=new FormElements(formid).getFromParams();

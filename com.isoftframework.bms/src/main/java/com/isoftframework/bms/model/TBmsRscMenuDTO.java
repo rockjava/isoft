@@ -1,4 +1,4 @@
-﻿package com.isoftframework.bms.model;
+package com.isoftframework.bms.model;
 
 import java.util.List;
 

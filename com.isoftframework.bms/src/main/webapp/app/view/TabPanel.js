@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.TabPanel', {
+Ext.define('FM.view.TabPanel', {
 	extend : 'Ext.tab.Panel',
 	requires : [ 'FM.ux.TabScrollerMenu', 'FM.ux.TabCloseMenu',
 			'FM.view.bms.home.Home' ],

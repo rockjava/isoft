@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.bms.org.OrgEditor', {
+Ext.define('FM.view.bms.org.OrgEditor', {
 	extend : 'Ext.form.Panel',
 	alias : 'widget.orgEditor',
 

@@ -1,4 +1,4 @@
-﻿Ext.define('FM.controller.MenuController',{
+Ext.define('FM.controller.MenuController',{
 	extend : 'Ext.app.Controller',
 	models:['Menu'],
 	stores:['Menus'],

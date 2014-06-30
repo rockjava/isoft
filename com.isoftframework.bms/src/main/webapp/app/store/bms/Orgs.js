@@ -1,4 +1,4 @@
-﻿Ext.define('FM.store.bms.Orgs',{
+Ext.define('FM.store.bms.Orgs',{
 	extend: 'Ext.data.TreeStore',
 	requires:['FM.model.bms.Org'],
 	model:'FM.model.bms.Org',

@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.bms.user.OrgTree', {
+Ext.define('FM.view.bms.user.OrgTree', {
     extend: 'FM.view.base.tree.TreeWithSearch',
     alias: 'widget.userOrgTree',
    // title: '组织机构',

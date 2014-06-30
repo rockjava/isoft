@@ -1,4 +1,4 @@
-﻿Ext.define('FM.model.isoftstore.Category', {
+Ext.define('FM.model.isoftstore.Category', {
     extend: 'Ext.data.Model',
     
     fields: [

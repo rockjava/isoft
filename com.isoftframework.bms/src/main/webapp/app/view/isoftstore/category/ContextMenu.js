@@ -1,4 +1,4 @@
-﻿
+
 Ext.define('FM.view.isoftstore.category.ContextMenu', {
     extend: 'Ext.menu.Menu',
     xtype: 'icategoryContextMenu',

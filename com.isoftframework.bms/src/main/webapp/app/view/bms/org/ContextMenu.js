@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @class FM.view.bms.sysMenuManage.ContextMenu
  * @extends Ext.menu.Menu
  */

@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.base.tree.TreeWithToolAction', {
+Ext.define('FM.view.base.tree.TreeWithToolAction', {
     extend: 'FM.view.base.tree.TreeWithSearch',
     alias: 'widget.actionTree',
     requires: [

@@ -1,4 +1,4 @@
-﻿var VERSION = "1.0b4";
+var VERSION = "1.0b4";
 var UPDATE_TIME = "2004-8-17";
 
 function prt(str) {

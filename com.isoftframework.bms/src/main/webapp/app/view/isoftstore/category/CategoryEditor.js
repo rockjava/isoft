@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.isoftstore.category.CategoryEditor', {
+Ext.define('FM.view.isoftstore.category.CategoryEditor', {
 	extend : 'Ext.form.Panel',
 	requires : [ 'FM.ux.form.IconSelector' ],
 	alias : 'widget.icategoryEditor',

@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.Menu', {
+Ext.define('FM.view.Menu', {
 	extend : 'Ext.tree.Panel',
 	alias : 'widget.fmNavMenu',
 	id : 'menu-panel',

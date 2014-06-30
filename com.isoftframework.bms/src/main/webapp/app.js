@@ -1,4 +1,4 @@
-﻿Ext.Loader.setPath('FM', 'app');
+Ext.Loader.setPath('FM', 'app');
 //FM={Constants:null};
 //FM.Constants=Ext.create('FM.Constants');
 //RequestURL=Ext.create('FM.RequestURL');

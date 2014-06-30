@@ -1,4 +1,4 @@
-﻿package com.isoftframework.web.session;
+package com.isoftframework.web.session;
 
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;

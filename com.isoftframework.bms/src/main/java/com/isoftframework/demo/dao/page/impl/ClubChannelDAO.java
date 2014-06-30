@@ -1,4 +1,4 @@
-﻿package com.isoftframework.demo.dao.page.impl;
+package com.isoftframework.demo.dao.page.impl;
 
 import java.util.List;
 

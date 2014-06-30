@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 
  */
 package com.isoftframework.web.session;

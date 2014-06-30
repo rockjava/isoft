@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.bms.home.Home', {
+Ext.define('FM.view.bms.home.Home', {
 	extend : 'Ext.panel.Panel',
 	uses : [ 'Ext.layout.container.Border', 'Ext.form.field.Text',
 			'Ext.form.field.ComboBox', 'Ext.toolbar.TextItem',

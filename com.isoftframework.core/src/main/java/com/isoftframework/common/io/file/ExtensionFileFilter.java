@@ -6,6 +6,8 @@ import java.io.FileFilter;
 public class ExtensionFileFilter implements FileFilter {
 	
 	public final static String img_regex="jpg|png|gif|bmp";
+	public final static String java_regex="java";
+	public final static String all_regex=".*";
 	
 	private String regex=".*";
 
@@ -15,6 +17,9 @@ public class ExtensionFileFilter implements FileFilter {
 
 	public boolean accept(File file) {
 		if (file.isDirectory()) {
+			return true;
+		}
+		if(regex==null || regex.trim().equals("")){
 			return true;
 		}
 		String name = file.getName();// find the last

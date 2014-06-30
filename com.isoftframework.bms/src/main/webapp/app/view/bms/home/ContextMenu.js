@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.bms.home.ContextMenu', {
+Ext.define('FM.view.bms.home.ContextMenu', {
 	extend : 'Ext.menu.Menu',
 	xtype : 'menuBrowserContextMenu',
 

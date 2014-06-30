@@ -1,4 +1,4 @@
-﻿Ext.define('FM.store.bms.Users',{
+Ext.define('FM.store.bms.Users',{
 	extend: 'Ext.data.Store',
 	storeId: 'usersStore',
 	requires:['FM.model.bms.User'],

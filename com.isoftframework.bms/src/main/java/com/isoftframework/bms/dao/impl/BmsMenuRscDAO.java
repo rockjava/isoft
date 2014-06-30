@@ -1,4 +1,4 @@
-﻿package com.isoftframework.bms.dao.impl;
+package com.isoftframework.bms.dao.impl;
 
 import java.util.List;
 

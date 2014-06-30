@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.bms.menursc.MenurscManage',{
+Ext.define('FM.view.bms.menursc.MenurscManage',{
     extend:'Ext.panel.Panel',
     layout: 'border',
     title: '系统菜单管理',

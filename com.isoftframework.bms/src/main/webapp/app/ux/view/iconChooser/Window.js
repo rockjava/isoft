@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @class Ext.chooser.Window
  * @extends Ext.window.Window
  * @author Ed Spencer

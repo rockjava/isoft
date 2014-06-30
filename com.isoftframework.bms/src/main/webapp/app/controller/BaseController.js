@@ -1,4 +1,4 @@
-﻿Ext.define('FM.controller.BaseController',{
+Ext.define('FM.controller.BaseController',{
 	extend : 'Ext.app.Controller',
 
 	/**

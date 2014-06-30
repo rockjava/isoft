@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @class Ext.chooser.InfoPanel
  * @extends Ext.panel.Panel
  * @author Ed Spencer

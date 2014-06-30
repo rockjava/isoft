@@ -1,4 +1,4 @@
-﻿/*
+/*
  * JavaScript Validation Framework
  *
  * Author: Michael Chen(mechiland) on 2004/03

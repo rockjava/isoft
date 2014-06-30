@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.bms.org.OrgTree', {
+Ext.define('FM.view.bms.org.OrgTree', {
     extend: 'FM.view.base.tree.TreeWithToolAction',
     alias: 'widget.orgTree',
 	 

@@ -1,4 +1,4 @@
-﻿Ext.define('FM.model.bms.User', {
+Ext.define('FM.model.bms.User', {
     extend: 'Ext.data.Model',
     
     fields: [

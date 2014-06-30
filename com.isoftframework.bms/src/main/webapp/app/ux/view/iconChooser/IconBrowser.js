@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @class Ext.chooser.IconBrowser
  * @extends Ext.view.View
  * @author Ed Spencer

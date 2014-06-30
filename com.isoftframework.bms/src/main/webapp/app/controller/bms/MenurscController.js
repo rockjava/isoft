@@ -1,4 +1,4 @@
-﻿Ext.define('FM.controller.bms.MenurscController',
+Ext.define('FM.controller.bms.MenurscController',
 {
 	extend : 'FM.controller.BaseController',
 	requires : [ 'FM.view.bms.menursc.MenurscEditor',

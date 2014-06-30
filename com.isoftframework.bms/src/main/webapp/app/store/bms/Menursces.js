@@ -1,4 +1,4 @@
-﻿Ext.define('FM.store.bms.Menursces', {
+Ext.define('FM.store.bms.Menursces', {
 	extend : 'FM.store.Menus',
 	root : {
 		text : '系统菜单资源',

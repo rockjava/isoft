@@ -1,4 +1,4 @@
-﻿package com.isoftframework.bms.controller;
+package com.isoftframework.bms.controller;
 
 import java.io.File;
 import java.util.ArrayList;

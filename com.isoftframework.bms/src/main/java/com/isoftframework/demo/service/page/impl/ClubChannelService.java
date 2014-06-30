@@ -1,4 +1,4 @@
-﻿package com.isoftframework.demo.service.page.impl;
+package com.isoftframework.demo.service.page.impl;
 
 import java.util.List;
 

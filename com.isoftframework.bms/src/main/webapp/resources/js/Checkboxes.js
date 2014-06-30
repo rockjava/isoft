@@ -1,4 +1,4 @@
-﻿
+
 /**
  * need util.js
  * 全选所有的checkbox 

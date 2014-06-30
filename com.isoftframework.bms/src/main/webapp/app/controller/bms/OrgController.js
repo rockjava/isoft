@@ -1,4 +1,4 @@
-﻿Ext.define('FM.controller.bms.OrgController',
+Ext.define('FM.controller.bms.OrgController',
 {
 	extend : 'FM.controller.BaseController',
 	stores : [ 'bms.Orgs' ],

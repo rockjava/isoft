@@ -1,6 +1,5 @@
 package com.isoftframework.common.io.file;
 
-import static java.lang.System.out;
 
 import java.io.*;
 import java.nio.ByteBuffer;
@@ -85,7 +84,10 @@ public class FileOperateUtil {
 			output.close();
 			input.close();
 		}else{
-			newFile.mkdirs();
+			if(!newFile.exists()){
+				newFile.mkdirs();
+			}
+			
 			File[] childFiles=oldFile.listFiles();
 			if(childFiles!=null && childFiles.length>0){
 				for(File child:childFiles){
@@ -155,7 +157,7 @@ public class FileOperateUtil {
 	 * @return
 	 */
 	public static File mergeTxtFiles(File desFile, String[] srcFiles) {
-		out.println("Merge " + Arrays.toString(srcFiles) + " into " + desFile);
+		System.out.println("Merge " + Arrays.toString(srcFiles) + " into " + desFile);
 		FileChannel outChannel = null;
 		try {
 			outChannel = new FileOutputStream(desFile).getChannel();

@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.bms.menursc.MenurscEditor', {
+Ext.define('FM.view.bms.menursc.MenurscEditor', {
 	extend: 'Ext.form.Panel',
 	alias: 'widget.menurscEditor',
 	autoDestroy: FM.Constants.get('autoDestroy'),

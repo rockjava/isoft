@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created on 2005-6-20
  */
 package com.isoftframework.common;

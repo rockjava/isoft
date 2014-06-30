@@ -1,4 +1,4 @@
-﻿package com.isoftframework.bms.controller;
+package com.isoftframework.bms.controller;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -1,4 +1,4 @@
-﻿Ext.define('FM.model.bms.Org', {
+Ext.define('FM.model.bms.Org', {
     extend: 'Ext.data.Model',
     fields: [
         { name: 'id', type: 'string' },

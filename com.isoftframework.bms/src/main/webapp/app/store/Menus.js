@@ -1,4 +1,4 @@
-﻿Ext.define('FM.store.Menus', {
+Ext.define('FM.store.Menus', {
 	extend : 'Ext.data.TreeStore',
 	requires : [ 'FM.model.Menu', 'FM.RequestURL','FM.Constants' ],
 	model : 'FM.model.Menu',

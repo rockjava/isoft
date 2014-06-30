@@ -1,4 +1,4 @@
-﻿Ext.define('FM.model.Menu', {
+Ext.define('FM.model.Menu', {
     extend: 'Ext.data.Model',
     fields: [
         { name: 'id', type: 'string' },

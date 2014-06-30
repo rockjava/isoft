@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.South',{
+Ext.define('FM.view.South',{
 	extend: 'Ext.Toolbar',
 	id:"bottom",
 	//frame:true,

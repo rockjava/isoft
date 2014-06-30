@@ -1,4 +1,4 @@
-﻿Ext.define('FM.store.isoftstore.Categories',{
+Ext.define('FM.store.isoftstore.Categories',{
 	extend: 'Ext.data.TreeStore',
 	requires:['FM.model.isoftstore.Category'],
 	model:'FM.model.isoftstore.Category',

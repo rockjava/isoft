@@ -1,4 +1,4 @@
-﻿/*
+/*
  * My97 DatePicker 4.2
  * SITE: http://dp.my97.net
  * BLOG: http://my97.cnblogs.com

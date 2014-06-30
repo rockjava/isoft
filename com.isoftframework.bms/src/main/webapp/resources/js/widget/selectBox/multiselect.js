@@ -1,4 +1,4 @@
-﻿  
+  
 /**
  * 事件绑定
  * 例：this.onClick.bindEvent(this,{foo:123});

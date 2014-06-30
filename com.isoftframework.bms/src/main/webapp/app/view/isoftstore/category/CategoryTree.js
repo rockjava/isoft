@@ -1,4 +1,4 @@
-﻿Ext.define('FM.view.isoftstore.category.CategoryTree', {
+Ext.define('FM.view.isoftstore.category.CategoryTree', {
     extend: 'FM.view.base.tree.TreeWithToolAction',
     alias: 'widget.icategoryTree',
 	 

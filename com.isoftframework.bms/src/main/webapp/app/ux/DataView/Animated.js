@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @author Ed Spencer (http://sencha.com)
  * Transition plugin for DataViews
  */
